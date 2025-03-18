@@ -76,7 +76,7 @@ body {
     color: #00c4ff;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-size: clamp( 3em, 17vw, 15rem);
+    font-size: clamp( 3em, 16vw, 15rem);
     grid-area: overlap;
     letter-spacing: 1px;
     -webkit-text-stroke: 4px transparent;

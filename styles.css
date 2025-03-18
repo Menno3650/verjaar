@@ -65,6 +65,7 @@ img {
 	place-content: center;
 	text-transform: uppercase;
 	height: 50vh;
+	  z-index: 1;
   }
   .wrapper > div {
 
@@ -167,19 +168,21 @@ img {
 
 .menu__btn {
 	position: fixed;
-	top: 30px; /* Verhoogt de afstand van de bovenkant */
-	left: 30px; /* Verhoogt de afstand van de linkerkant */
-	width: 60px; /* Vergroot de breedte van de knop */
-	height: 60px; /* Vergroot de hoogte van de knop */
+	top: 10px; /* Zet het menu dichter bij de bovenkant */
+	left: 10px; /* Houd het menu linksboven */
+	width: 60px;
+	height: 60px;
 	cursor: pointer;
-	z-index: 1;
-	border-radius: 50%; /* Maakt de knop rond */
-	background-color: #ffffff; /* Voeg een achtergrondkleur toe aan de knop */
+	z-index: 9999; /* Zorg ervoor dat het menu altijd bovenop staat */
+	border-radius: 50%;
+	background-color: #ffffff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 2px 2px 6px rgba(0, 0, 0, .4); /* Schaduw voor de knop */
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
 }
+
+
 
 .menu__btn > span,
 .menu__btn > span::before,
@@ -209,12 +212,11 @@ img {
 	left: -100%;
 	width: 300px;
 	height: 100%;
-	margin: 0;
 	padding: 80px 0;
-	list-style: none;
 	background-color: #ECEFF1;
 	box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-	transition-duration: .25s;
+	transition: left 0.25s;
+	z-index: 9998; /* Zorg dat het menu ook boven de tekst komt */
 }
 
 .menu__item {
