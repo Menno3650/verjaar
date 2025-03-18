@@ -63,7 +63,7 @@
         <div class="tall">
             <img src="foto/foto11.jpg" alt="" />
         </div>
-         
+
         <div class="big">
             <img src="foto/foto12.jpg" alt="" />
         </div>
@@ -124,7 +124,7 @@
             const prevBtn = popup.querySelector('.prev');
             const nextBtn = popup.querySelector('.next');
             let currentIndex = 0;
-        
+
             images.forEach((image, index) => {
                 image.onclick = () => {
                     currentIndex = index;
@@ -139,12 +139,12 @@
                 currentIndex = (currentIndex - 1 + images.length) % images.length;
                 updatePopupImage();
             };
-        
+
             nextBtn.onclick = () => {
                 currentIndex = (currentIndex + 1) % images.length;
                 updatePopupImage();
             };
-        
+
             function updatePopupImage() {
                 popupImg.src = images[currentIndex].getAttribute('src');
             }
